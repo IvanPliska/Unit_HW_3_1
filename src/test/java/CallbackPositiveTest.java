@@ -11,7 +11,6 @@ public class CallbackPositiveTest {
     @BeforeAll
     static void setUpAll() {
         WebDriverManager.chromedriver().setup();
-        //System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
     }
 
     @BeforeEach
@@ -30,7 +29,7 @@ public class CallbackPositiveTest {
     }
 
     @Test
-    void shouldTestV1() {
+    void shouldPositiveTestNameAndPhone() {
         driver.get("http://localhost:7777/");
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Андрей");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+78885556666");
@@ -42,7 +41,7 @@ public class CallbackPositiveTest {
     }
 
     @Test
-    void shouldTestV2() {
+    void shouldPositiveTestNameSurnameAndPhone() {
         driver.get("http://localhost:7777/");
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Андрей Иванов");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+83336662255");
@@ -54,7 +53,7 @@ public class CallbackPositiveTest {
     }
 
     @Test
-    void shouldTestV3() {
+    void shouldPositiveTestSurnameOnDash() {
         driver.get("http://localhost:7777/");
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Андрей Серо-Водородов");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+43335552255");
@@ -66,7 +65,7 @@ public class CallbackPositiveTest {
     }
 
     @Test
-    void shouldTestV4() {
+    void shouldPositiveTestNameSurnameUppercase() {
         driver.get("http://localhost:7777/");
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("АНДРЕЙ СУРКОВ");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+00000000000");
@@ -78,7 +77,7 @@ public class CallbackPositiveTest {
     }
 
     @Test
-    void shouldTestV5() {
+    void shouldPositiveTestNameSurnameLowercase() {
         driver.get("http://localhost:7777/");
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("андрей иванов");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+00000000000");
